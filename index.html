@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        
+        .container, .btn-holder {
+            display: grid;
+            gap: 10px;
+            text-align: center;
+            margin: 20px 0;
+            p {
+                margin: 0;
+                padding: 10px;
+                border: 2px solid rgba(0, 0, 0, 0.438);
+            }
+        }
+        .btn-holder {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            button {
+                border: 0;
+                background-color: rgb(0, 209, 209);
+                font-size: 16px;
+                padding: 10px;
+            }
+            button:hover {
+                background-color: rgb(0, 100, 139);
+                color: #fff;
+            }
+            button:disabled {
+                background-color: rgb(139, 0, 0);
+                color: #fff;
+                cursor: not-allowed;
+            }
+        }
+    </style>
+  </head>
+  <body>
+    <div class="container" id="matrixHolder"></div>
+    <div class="info" id="infoHolder">
+
+    </div>
+    <div class="btn-holder">
+      <button id="settings">Налаштування відображення матриці</button>
+      <button id="mainDiagonal">Сума головної діагоналі</button>
+      <button id="secDiagonal">Сума побочної діагоналі</button>
+      <button id="halfUpRight">Сума половини матриці без головної діагоналі зверху зправа</button>
+      <button id="mainHalfUpRight">Сума половини матриці з головною діагоналлю зверху зправа</button>
+      <button id="halfDownLeft">Сума половини матриці без головної діагоналі знизу зліва</button>
+      <button id="mainHalfDownLeft">Сума половини матриці з головною діагоналлю знизу зліва</button>
+      <button id="halfUpLeft">Сума половини матриці без побічної діагоналі зверху зліва</button>
+      <button id="mainHalfUpLeft">Сума половини матриці з побочною діагоналлю зверху зліва</button>
+      <button id="halfDownRight">Сума половини матриці без побічної діагоналі внизу зправа</button>
+      <button id="rowSum">Сума обранної строки</button>
+      <button id="colSum">Сумма обранної стовпця</button>
+    </div>
+    <script src="./main.js"></script>
+  </body>
+</html>
